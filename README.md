@@ -1,6 +1,6 @@
 # Nomflix
 
-Learning React and ES6 y building a Movie Discovery App.
+Learning React and ES6 by building a Movie Discovery App.
 
 ## Screens
 
