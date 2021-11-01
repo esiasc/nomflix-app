@@ -48,7 +48,7 @@ export default class extends React.Component {
                 searchTerm={searchTerm}
                 error={error}
                 loading={loading}
-                handleSubmit={handleSubmit}
+                handleSubmit={this.handleSubmit}
             />
         );
     }
