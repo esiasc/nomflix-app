@@ -11,11 +11,20 @@ export default class extends React.Component {
         loading: false
     }
 
-    handleSubmit = () => {
+    handleSubmit = (event) => {
+        event.preventDefault();
         const {searchTerm} = this.state;
         if(searchTerm !== ""){
             this.searchByTerm(searchTerm);
         }
+    }
+
+    updateTerm = (event) => {
+        const { target: {value} } = event; //event는 target을 가지고 target은 value를 가진다.
+        console.log(value);
+        this.setState({
+            searchTerm: value
+        });
     }
 
     searchByTerm = async() => {
@@ -49,6 +58,7 @@ export default class extends React.Component {
                 error={error}
                 loading={loading}
                 handleSubmit={this.handleSubmit}
+                updateTerm={this.updateTerm}
             />
         );
     }
